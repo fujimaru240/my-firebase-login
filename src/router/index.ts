@@ -11,6 +11,16 @@ Vue.use(VueRouter)
     component: Home
   },
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
+  },
+  {
+    path: '/secret',
+    name: 'Secret',
+    component: () => import(/* webpackChunkName: "secret" */ '../views/Secret.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
